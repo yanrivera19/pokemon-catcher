@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import CatchPokemonPage from "./components/CatchPokemonPage";
 import HomePage from "./components/HomePage";
 import SelectedPokemon from "./components/SelectedPokemon";

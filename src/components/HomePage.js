@@ -12,7 +12,7 @@ const HomePage = () => {
 
     useEffect(() => {
         dispatch(getCatchedPokemons());
-    }, []);
+    }, [dispatch]);
 
     const renderList = catchedPokemons.map((pokemon) => (
         <PokemonItem traits={pokemon} key={pokemon.id} />

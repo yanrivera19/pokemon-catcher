@@ -18,7 +18,7 @@ const CatchPokemonPage = () => {
     useEffect(() => {
         dispatch(fetchPokemons(Math.floor(Math.random() * 20) * 10));
         dispatch(getCatchedPokemons());
-    }, []);
+    }, [dispatch]);
 
     const renderList = pokemonItems.map((pokemon) => (
         <PokemonItem

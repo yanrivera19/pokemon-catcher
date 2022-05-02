@@ -14,7 +14,7 @@ const SelectedPokemon = () => {
 
     useEffect(() => {
         dispatch(getSelectedPokemon());
-    }, []);
+    }, [dispatch]);
 
     const capitalize = (word) => word[0].toUpperCase() + word.slice(1);
 
@@ -59,6 +59,7 @@ const SelectedPokemon = () => {
                                 <img
                                     src={sprites.other.home.front_default}
                                     className="selected-img img-fluid"
+                                    alt={name}
                                 />
                             </div>
                             <div className="row mt-5 m-auto types-abil-div">
