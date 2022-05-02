@@ -4,7 +4,6 @@ import {
     fetchPokemons,
     getCatchedPokemons,
 } from "../features/pokemon/pokemonSlice";
-
 import { useDispatch, useSelector } from "react-redux";
 import PokemonItem from "./PokemonItem";
 
@@ -13,10 +12,10 @@ const CatchPokemonPage = () => {
     const { pokemonItems, catchedPokemons } = useSelector(
         (state) => state.pokemon
     );
-    console.log(catchedPokemons);
+    const randomNum = Math.floor(Math.random() * 20) * 10;
 
     useEffect(() => {
-        dispatch(fetchPokemons(Math.floor(Math.random() * 20) * 10));
+        dispatch(fetchPokemons(randomNum));
         dispatch(getCatchedPokemons());
     }, [dispatch]);
 
