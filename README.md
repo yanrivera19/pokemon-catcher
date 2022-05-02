@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# Pokemon Catcher
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An app where users can catch pokémons, add them to their pokémon list, and have access to more details about them. The data displayed was obtained using the [RESTful Pokémon API (PokéApi)](https://pokeapi.co/docs/v2).
 
-## Available Scripts
+### How the App Works
 
-In the project directory, you can run:
+The App, when first loaded, displays the home page with a "Catch a Pokémon" button. When clicked, this button takes users to a page where they can see all of the pokémons that they can catch. Before deciding to catch a pokémon, users can see its abilities by clicking on the pokémon card. When deciding to catch a pokémon by clicking the catch button (which below the abilities), a modal will appear. This modal shows the selected pokémon's types and gives users the option to change the pokémon's name. After a pokémon is successfully catched, the card containing it will show a checkmark indicating that it was caught, and the pokémon will be added to the user's caught pokémons list, which can be seen in the home page.
 
-### `npm start`
+On the home page, users have the capacity to see more details about their caught pokémons and release them by clicking on the pokémon card. When deciding to release a pokémon, a modal will appear to confirm the decision being made.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+-   React
+-   Redux Toolkit
+-   Bootstrap
+-   Axios
+-   PokéApi
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Quick Start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. If you wish to download and run the application locally, first clone the app onto your local machine.
+2. In your console, select the cloned app and type in the command <code>npm install</code>.
+3. After that command is done running, type in the command <code>npm start</code>. The app will then open in the browser on localhost:3000.

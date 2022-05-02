@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import CatchPokemonPage from "./components/CatchPokemonPage";
+import HomePage from "./components/HomePage";
+import SelectedPokemon from "./components/SelectedPokemon";
+import Modal from "./components/Modal";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const { isOpen } = useSelector((state) => state.modal);
+
+    return (
+        <div className="container App my-5">
+            {isOpen && <Modal />}
+            <header className="my-5">
+                <h1 className="app-header">Pokémon Catcher</h1>
+            </header>
+            <Routes>
+                <Route path={"/"} element={<HomePage />} />
+                <Route path={"/:namePokemon"} element={<SelectedPokemon />} />
+                <Route path={"/catch-pokemon"} element={<CatchPokemonPage />} />
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
