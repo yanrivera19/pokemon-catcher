@@ -8,8 +8,6 @@ const HomePage = () => {
     const dispatch = useDispatch();
     const { catchedPokemons } = useSelector((state) => state.pokemon);
 
-    console.log(catchedPokemons);
-
     useEffect(() => {
         dispatch(getCatchedPokemons());
     }, [dispatch]);
