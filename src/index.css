@@ -57,8 +57,13 @@ body {
     color: white;
 }
 
-.selected {
+.selected,
+.selected-name {
     font-weight: 800 !important;
+}
+
+.selected {
+    text-decoration: underline;
 }
 /**********/
 
@@ -209,7 +214,6 @@ body {
     backface-visibility: hidden;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    position: absolute;
     top: 0;
     left: 0;
 }
@@ -292,16 +296,25 @@ body {
 
     .poke-card {
         width: 240px;
-        height: 190px;
+        height: 200px;
     }
 
-    .see-more-btn {
+    .see-more-btn,
+    .selected-name {
         margin-top: 20px !important;
+    }
+
+    .selected-img-cont {
+        max-width: 16em;
     }
 }
 
 @media only screen and (max-width: 600px) {
     #home-btn {
         font-size: 25px;
+    }
+
+    .selected-img-cont {
+        max-width: 15em;
     }
 }

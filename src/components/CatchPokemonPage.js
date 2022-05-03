@@ -41,7 +41,7 @@ const CatchPokemonPage = () => {
                             <button className="btn p-2 ">
                                 <i className="fa-solid fa-arrow-left go-back-btn p-2 rounded-circle"></i>
                             </button>
-                            <p className="mb-0 ">Go back</p>
+                            <p className="mb-0 fw-bold">Go back</p>
                         </div>
                     </Link>
 

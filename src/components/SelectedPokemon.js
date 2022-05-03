@@ -47,12 +47,16 @@ const SelectedPokemon = () => {
                             <button className="btn p-2">
                                 <i className="fa-solid fa-arrow-left go-back-btn p-2 rounded-circle"></i>
                             </button>
-                            <p className="mb-0">Go back</p>
+                            <p className="mb-0 fw-bold">Go back</p>
                         </div>
                     </Link>
                     <div>
                         <header className="mb-4">
-                            <h2 className="selected">{capitalize(name)}</h2>
+                            <h2 className="selected-name">
+                                <i className="fa-solid fa-circle-dot me-2" />
+                                {capitalize(name)}
+                                <i className="fa-solid fa-circle-dot ms-2" />
+                            </h2>
                         </header>
                         <div>
                             <div className=" selected-img-cont rounded-circle m-auto">
