@@ -185,7 +185,6 @@ body {
     transition: transform 0.6s;
     -webkit-transition: transform 0.6s;
     transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
     box-shadow: 0 5px 5px rgb(0 0 0 / 0.6);
     border-radius: 15px;
 }
@@ -208,6 +207,11 @@ body {
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .poke-card-back {
@@ -221,6 +225,12 @@ body {
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     border-radius: 15px;
+}
+
+.poke-card-front {
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
 }
 
 .card-title {
