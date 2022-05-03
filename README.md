@@ -6,7 +6,9 @@ An app where users can catch pokémons, add them to their pokémon list, and hav
 
 The App, when first loaded, displays the home page with a "Catch a Pokémon" button. When clicked, this button takes users to a page where they can see all of the pokémons that they can catch. At the top of this page, there is a button with the text "See more Pokémons" that, when clicked, displays a new list of pokémons.
 
-When clicking on a pokémon card, users can see the pokemon's abilities. Below the abilities there is a button with the text "Catch" that, when clicked, opens a modal. This modal shows the selected pokémon's types and gives users the option to change the pokémon's name. After a pokémon is successfully catched, the card containing it will show a checkmark indicating that it was caught, and the pokémon will be added to the user's caught pokémons list, which will be located in the home page.
+When clicking on a pokémon card, users can see the pokemon's abilities. Below the abilities there is a button with the text "Catch" that, when clicked, opens a modal. This modal shows the selected pokémon's types and gives users the option to change the pokémon's name. To change the pokémon's name, the "change name" button must be clicked before clicking the "catch" button.
+
+After a pokémon is successfully catched, the card containing it will show a checkmark indicating that it was caught, and the pokémon will be added to the user's caught pokémons list, which will be located in the home page.
 
 On the home page, users have the capacity to see more details about their caught pokémons or release them by clicking on the pokémon card. When deciding to release a pokémon, a modal will appear so that users can confirm the decision to release the pokémon.
 
