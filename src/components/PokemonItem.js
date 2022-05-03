@@ -24,14 +24,14 @@ const PokemonItem = ({ traits, catched }) => {
     };
 
     return (
-        <div className="col-sm-4 flip-card" key={id} onClick={toggleClass}>
+        <div className="col-sm-4 poke-card" key={id} onClick={toggleClass}>
             <div
-                className="card flip-card-inner"
+                className="card poke-card-inner"
                 style={{
                     transform: `${isActive ? "rotateY(180deg)" : ""}`,
                 }}
             >
-                <div className="card-body flip-card-front">
+                <div className="card-body poke-card-front">
                     <h5 className="card-title">{capitalize(name)}</h5>
                     <div className="img-container m-0 rounded-circle">
                         <img
@@ -41,12 +41,14 @@ const PokemonItem = ({ traits, catched }) => {
                         />
                     </div>
                 </div>
-                <div className="card-body flip-card-back">
+                <div className="card-body poke-card-back">
                     <h5 className="card-title fw-bold">Abilities:</h5>
                     {ability}
                     {location.pathname === "/catch-pokemon" ? (
                         catched === true ? (
-                            <i className="check-icon fa-solid fa-circle-check rounded-circle" />
+                            <div className="check-icon-container">
+                                <i className="check-icon fa-solid fa-circle-check rounded-circle" />
+                            </div>
                         ) : (
                             <div className="detail-btn-container">
                                 <button
