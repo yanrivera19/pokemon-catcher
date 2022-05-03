@@ -46,7 +46,7 @@ const CatchPokemonPage = () => {
                     </Link>
 
                     <button
-                        className="btn fs-5 catch-pok-btn home-catch-btn mt-1 mb-4"
+                        className="btn fs-5 see-more-btn mt-1 mb-4"
                         onClick={() => dispatch(fetchPokemons(randomNum()))}
                     >
                         See More Pokémons!

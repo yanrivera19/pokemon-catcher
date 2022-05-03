@@ -49,7 +49,6 @@ body {
     -webkit-text-stroke: 3px #204a88;
     color: #fbd743;
     text-shadow: 2px 2px #204a88, 0 3px 10px white;
-
     letter-spacing: 6px;
     font-size: 60px !important;
 }
@@ -64,7 +63,8 @@ body {
 /**********/
 
 /*****BUTTONS & ICONS*****/
-.home-catch-btn {
+.home-catch-btn,
+.see-more-btn {
     box-shadow: 0 0px 10px white !important;
 }
 
@@ -89,7 +89,8 @@ body {
 .catch-pok-btn,
 .details-btn,
 .release-btn,
-.cancel-btn {
+.cancel-btn,
+.see-more-btn {
     background-color: #204a88;
     color: white;
     border-radius: 20px;
@@ -98,7 +99,8 @@ body {
 .catch-pok-btn:hover,
 .details-btn:hover,
 .release-btn:hover,
-.cancel-btn:hover {
+.cancel-btn:hover,
+.see-more-btn:hover {
     background-color: #08224ee6;
     color: white;
 }
@@ -181,7 +183,9 @@ body {
     height: 100%;
     text-align: center;
     transition: transform 0.6s;
+    -webkit-transition: transform 0.6s;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     box-shadow: 0 5px 5px rgb(0 0 0 / 0.6);
     border-radius: 15px;
 }
@@ -215,6 +219,7 @@ body {
     );
     color: #4a4969;
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
     border-radius: 15px;
 }
 
@@ -278,5 +283,15 @@ body {
     .poke-card {
         width: 240px;
         height: 190px;
+    }
+
+    .see-more-btn {
+        margin-top: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #home-btn {
+        font-size: 25px;
     }
 }
