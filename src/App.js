@@ -9,16 +9,24 @@ function App() {
     const { isOpen } = useSelector((state) => state.modal);
 
     return (
-        <div className="container App my-5">
-            {isOpen && <Modal />}
-            <header className="my-5">
-                <h1 className="app-header">Pokémon Catcher</h1>
-            </header>
-            <Routes>
-                <Route path={"/"} element={<HomePage />} />
-                <Route path={"/:namePokemon"} element={<SelectedPokemon />} />
-                <Route path={"/catch-pokemon"} element={<CatchPokemonPage />} />
-            </Routes>
+        <div className="App">
+            <div className="container my-5">
+                {isOpen && <Modal />}
+                <header className="my-5">
+                    <h1 className="app-header">Pokémon Catcher</h1>
+                </header>
+                <Routes>
+                    <Route path={"/"} element={<HomePage />} />
+                    <Route
+                        path={"/:namePokemon"}
+                        element={<SelectedPokemon />}
+                    />
+                    <Route
+                        path={"/catch-pokemon"}
+                        element={<CatchPokemonPage />}
+                    />
+                </Routes>
+            </div>
         </div>
     );
 }
