@@ -12,10 +12,10 @@ const CatchPokemonPage = () => {
     const { pokemonItems, catchedPokemons } = useSelector(
         (state) => state.pokemon
     );
-    const randomNum = Math.floor(Math.random() * 20) * 10;
+    const randomNum = () => Math.floor(Math.random() * 20) * 10;
 
     useEffect(() => {
-        dispatch(fetchPokemons(randomNum));
+        dispatch(fetchPokemons(randomNum()));
         dispatch(getCatchedPokemons());
     }, [dispatch]);
 
@@ -38,6 +38,12 @@ const CatchPokemonPage = () => {
                 </div>
             </Link>
 
+            <button
+                className="btn fs-5 catch-pok-btn home-catch-btn mt-1 mb-4"
+                onClick={() => dispatch(fetchPokemons(randomNum()))}
+            >
+                See More Pokémons!
+            </button>
             <header className="pok-header mb-4 mt-2">
                 <h3 className="fw-bold">
                     <i className="fa-solid fa-circle-dot me-2" />
@@ -45,7 +51,10 @@ const CatchPokemonPage = () => {
                     <i className="fa-solid fa-circle-dot ms-2" />
                 </h3>
             </header>
-            <div className="row g-2 justify-content-center m-auto pok-list">
+            <div
+                data-testid="pok-list"
+                className="row g-2 justify-content-center m-auto pok-list"
+            >
                 {renderList}
             </div>
         </div>
