@@ -75,7 +75,7 @@ const Modal = () => {
                                 />
                                 <button
                                     type="button"
-                                    className="btn mt-0 btn-outline-secondary"
+                                    className="btn change-name-btn mt-0 btn-outline-secondary"
                                     onClick={() => {
                                         dispatch(changeName(newName));
                                     }}

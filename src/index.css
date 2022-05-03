@@ -114,6 +114,15 @@ body {
     border-radius: 20px;
 }
 
+.change-name-btn {
+    color: #4a4969 !important;
+    font-weight: bold;
+}
+
+.change-name-btn:hover {
+    color: white !important;
+}
+
 .go-back-btn {
     background-color: white;
 }
