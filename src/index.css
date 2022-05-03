@@ -168,14 +168,14 @@ body {
 /**********/
 
 /*****CARDS*****/
-.flip-card {
+.poke-card {
     background-color: transparent;
     width: 270px;
     height: 200px;
     perspective: 1000px;
 }
 
-.flip-card-inner {
+.poke-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
@@ -186,19 +186,19 @@ body {
     border-radius: 15px;
 }
 
-.flip-card-inner:hover {
+.poke-card-inner:hover {
     transition: 0.3s ease-in-out;
     background-color: #204a88;
     color: white;
 }
 
 .catched-pok-card,
-.flip-card-inner {
+.poke-card-inner {
     cursor: pointer;
 }
 
-.flip-card-front,
-.flip-card-back {
+.poke-card-front,
+.poke-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -206,7 +206,7 @@ body {
     backface-visibility: hidden;
 }
 
-.flip-card-back {
+.poke-card-back {
     background: linear-gradient(
         to bottom,
         #94c5f8 1%,
@@ -275,7 +275,7 @@ body {
         font-size: 45px !important;
     }
 
-    .flip-card {
+    .poke-card {
         width: 240px;
         height: 190px;
     }
