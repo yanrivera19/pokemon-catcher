@@ -222,8 +222,8 @@ body {
         #b1b5ea 100%
     );
     color: #4a4969;
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
     border-radius: 15px;
 }
 
