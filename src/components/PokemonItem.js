@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { selectPokemon } from "../features/pokemon/pokemonSlice";
 import { openModal } from "../features/modal/modalSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const PokemonItem = ({ traits, catched }) => {
     const [isActive, setActive] = useState(false);
+    const { catchedPokemons } = useSelector((state) => state.pokemon);
     const dispatch = useDispatch();
     const { abilities, name, sprites, id } = traits;
     const navigate = useNavigate();
@@ -18,6 +19,16 @@ const PokemonItem = ({ traits, catched }) => {
             {capitalize(ability.ability.name)}
         </p>
     ));
+
+    const updateName = () => {
+        return catchedPokemons.map((pok) => {
+            let newName;
+            if (pok.id === id) {
+                newName = capitalize(pok.name);
+            }
+            return newName;
+        });
+    };
 
     const toggleClass = () => {
         setActive(!isActive);
@@ -32,7 +43,9 @@ const PokemonItem = ({ traits, catched }) => {
                 }}
             >
                 <div className="card-body poke-card-front">
-                    <h5 className="card-title">{capitalize(name)}</h5>
+                    <h5 className="card-title">
+                        {catched ? updateName() : capitalize(name)}
+                    </h5>
                     <div className="img-container m-0 rounded-circle">
                         <img
                             src={sprites.other.dream_world.front_default}
