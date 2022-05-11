@@ -54,13 +54,7 @@ function App() {
                     <Route
                         path={"/catch-pokemon"}
                         element={
-                            <Suspense
-                                fallback={
-                                    <div style={style}>
-                                        <Loader />
-                                    </div>
-                                }
-                            >
+                            <Suspense fallback={<div></div>}>
                                 <CatchPokemonPage />
                             </Suspense>
                         }
