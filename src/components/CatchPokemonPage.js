@@ -1,4 +1,4 @@
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
     fetchPokemons,
@@ -20,7 +20,7 @@ const CatchPokemonPage = () => {
     useEffect(() => {
         dispatch(fetchPokemons(randomNum()));
         dispatch(getCatchedPokemons());
-        setTimeout(() => setHide(false), 500);
+        setTimeout(() => setHide(false), 800);
     }, [dispatch]);
 
     const renderList = pokemonItems.map((pokemon) => (
