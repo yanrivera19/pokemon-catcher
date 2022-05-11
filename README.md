@@ -1,6 +1,6 @@
 # Pokemon Catcher
 
-An app where users can catch pokémons, add them to their pokémon list, and have access to more details about them. The data displayed was obtained using the [RESTful Pokémon API (PokéApi)](https://pokeapi.co/docs/v2).
+An app where users can catch pokémons, change their names, add them to their pokémon list and/or remove them, and have access to more details about them. The data displayed was obtained using the [RESTful Pokémon API (PokéApi)](https://pokeapi.co/docs/v2).
 
 ### How the App Works
 
