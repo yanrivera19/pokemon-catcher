@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import PokemonItem from "./PokemonItem";
 import { getCatchedPokemons } from "../features/pokemon/pokemonSlice";
+import { motion, AnimatePresence } from "framer-motion";
 
 const HomePage = () => {
     const dispatch = useDispatch();
@@ -32,19 +33,35 @@ const HomePage = () => {
                             <i className="fa-solid fa-circle-dot ms-2" />
                         </h3>
                     </header>
-                    <div className="row g-2 justify-content-center m-auto pok-list">
-                        {catchedPokemons.length > 0 && renderList}
-                    </div>
+                    <AnimatePresence>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.75 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0.75, scale: 0 }}
+                        >
+                            <div className="row g-2 justify-content-center m-auto pok-list">
+                                {catchedPokemons.length > 0 && renderList}
+                            </div>
+                        </motion.div>
+                    </AnimatePresence>
                 </>
             ) : (
-                <Link to="/catch-pokemon">
-                    <button
-                        id="home-btn"
-                        className="btn catch-pok-btn px-4 mb-3"
+                <AnimatePresence>
+                    <motion.div
+                        initial={{ y: -300, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: 300, opacity: 0 }}
                     >
-                        Catch a Pokémon!
-                    </button>
-                </Link>
+                        <Link to="/catch-pokemon">
+                            <button
+                                id="home-btn"
+                                className="btn catch-pok-btn px-4 mb-3"
+                            >
+                                Catch a Pokémon!
+                            </button>
+                        </Link>
+                    </motion.div>
+                </AnimatePresence>
             )}
         </div>
     );
