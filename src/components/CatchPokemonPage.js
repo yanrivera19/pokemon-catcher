@@ -20,7 +20,7 @@ const CatchPokemonPage = () => {
     useEffect(() => {
         dispatch(fetchPokemons(randomNum()));
         dispatch(getCatchedPokemons());
-        setTimeout(() => setHide(false), 800);
+        setTimeout(() => setHide(false), 1000);
     }, [dispatch]);
 
     const renderList = pokemonItems.map((pokemon) => (
