@@ -21,6 +21,8 @@ const Modal = () => {
 
     const onSubmit = (event) => {
         event.preventDefault();
+
+        dispatch(changeName(newName));
     };
 
     return (
@@ -28,9 +30,9 @@ const Modal = () => {
             <div className="mod text-center">
                 {location.pathname === "/" ? (
                     <>
-                        <h4 className="fw-bold">
+                        <h5 className="fw-bold">
                             Are you sure you want to release this pokémon?
-                        </h4>
+                        </h5>
                         <div className="btn-container mt-5">
                             <button
                                 type="button"
@@ -74,11 +76,8 @@ const Modal = () => {
                                     autoFocus
                                 />
                                 <button
-                                    type="button"
+                                    type="submit"
                                     className="btn change-name-btn mt-0 btn-outline-secondary"
-                                    onClick={() => {
-                                        dispatch(changeName(newName));
-                                    }}
                                 >
                                     Change name
                                 </button>
