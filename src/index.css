@@ -13,7 +13,7 @@ body {
     background-attachment: fixed;
     color: #204a88;
     text-align: center;
-    font-family: "Lato", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 .App {
@@ -57,17 +57,28 @@ body {
     color: white;
 }
 
+.pok-header,
+.selected-name,
 .selected,
-.selected-name {
-    font-weight: 800 !important;
+.card-title {
+    font-family: "Montserrat", sans-serif;
 }
 
 .selected {
     text-decoration: underline;
+    text-decoration-color: #4a4969;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 3px;
+    margin-bottom: 15px;
 }
 /**********/
 
 /*****BUTTONS & ICONS*****/
+button,
+.go-back-txt {
+    font-family: "Montserrat", sans-serif;
+}
+
 .home-catch-btn,
 .see-more-btn {
     box-shadow: 0 0px 10px white !important;
@@ -116,7 +127,6 @@ body {
 
 .change-name-btn {
     color: #4a4969 !important;
-    font-weight: bold;
 }
 
 .change-name-btn:hover {
@@ -144,15 +154,17 @@ body {
 
 /*****IMAGES*****/
 .card-img {
-    max-height: 7rem;
+    height: 7rem;
 }
 
-.selected-img {
-    max-height: 19rem;
+.selected-img-cont {
+    height: 16rem;
+    width: 16rem;
 }
 
 .img-container {
     padding: 10px 0;
+    height: 8.2rem;
 }
 
 .img-container,
@@ -163,10 +175,6 @@ body {
         #a6e6ff 70%,
         #b1b5ea 100%
     );
-}
-
-.selected-img-cont {
-    max-width: 18em;
 }
 /**********/
 
@@ -245,10 +253,6 @@ body {
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
 }
-
-.card-title {
-    font-weight: 800 !important;
-}
 /**********/
 
 /*****MODAL*****/
@@ -314,7 +318,8 @@ body {
     }
 
     .selected-img-cont {
-        max-width: 16em;
+        height: 15rem;
+        width: 15rem;
     }
 }
 
@@ -324,6 +329,7 @@ body {
     }
 
     .selected-img-cont {
-        max-width: 15em;
+        height: 14rem;
+        width: 14rem;
     }
 }
