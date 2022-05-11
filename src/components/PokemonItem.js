@@ -43,7 +43,7 @@ const PokemonItem = ({ traits, catched }) => {
                 }}
             >
                 <div className="card-body poke-card-front">
-                    <h5 className="card-title">
+                    <h5 className="card-title fw-bold">
                         {catched ? updateName() : capitalize(name)}
                     </h5>
                     <div className="img-container m-0 rounded-circle">
